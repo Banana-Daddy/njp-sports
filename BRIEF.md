@@ -1,5 +1,9 @@
 # NJP Sports Inc — Design Brief
 
+> **Round 2 update:** First pass under-represented the catalog and incorrectly placed Edwards + Playmate in the "where the work lives" marquee. Capabilities expanded from 10 cards to a 17-line catalog organized in three groups; venue marquee now lists only real install locations; new dedicated **Distributors** band carries Edwards / Playmate / First Team. See bottom of file for the full Round 2 changelog.
+
+
+
 ## Brand Synopsis
 
 NJP Sports Inc. is a Glendale, California-based windscreen and tennis-court-equipment specialist. **In business since 1971**. **On the web since 1996** (their domain has been online longer than most people have been on the internet). Family-run wholesale supplier, manufacturer, and licensed contractor (Lic. No. 284844 C-13) — they fabricate custom mesh and vinyl windscreen on a Glendale workshop floor, install across the greater Los Angeles area, and ship the rest worldwide.
@@ -125,6 +129,53 @@ Auto-generation skipped this build (Grok / Gemini API keys not set in this sessi
 | **Total before publish** | **~6m 45s** |
 
 PUBLISH and DELIVER timings appended to delivery message.
+
+## Round 2 Changelog
+
+After Daddy flagged that the first pass under-represented the actual catalog and that "the work doesn't live at Playmate Tennis":
+
+### Capabilities expanded — 10 cards → 17 lines, three groups
+
+**Group A · Custom Fabrication** (cut, hem, grommet, label, on the Glendale floor)
+- A.01 Custom Mesh Screen (flagship — open & closed knit polyethylene, custom heights to 15′)
+- A.02 Custom Vinyl Screen
+- A.03 **NEW: Printed & Designed Screens** (custom logos / graphics on mesh or vinyl — was missing)
+- A.04 **NEW: Temporary Screen / Construction Screen** (premade panels + 150′ rolls — was missing)
+- A.05 Padding & Polycap (4″ fence guard, 250′ rolls, baseball bunting — was thin)
+- A.06 Baseball · Golf · **Custom Netting** (#42 HDPE, batting cages, ball containment, plant structures — custom-netting use case was missing)
+
+**Group B · Tennis Court Equipment** (Edwards · England · since 1884)
+- B.01 Tennis Nets (Edwards 30 LS / 40 LS, 47′ cable)
+- B.02 Tennis Posts (Edwards Classic round 3″ steel)
+- B.03 **NEW: Post & Net Installation as a service** ($525–$650, LA / Orange / Ventura — was missing the flat pricing and tri-county scope)
+- B.04 Court Cleaning (9-jet waterbroom, special non-scuff ¾″ hose in 75/100/150′ lengths, foam court rollers)
+- B.05 **NEW: Court Valets, Trash & Scorekeepers** (Court Valet $70, Courtserve trashcan/ball collector $225 — was missing)
+- B.06 Umpire Chairs & Benches (2532 aluminum chair 6′ tall, 2502/3 5′ polyurethane benches)
+
+**Group C · Authorized Distribution + Other Sports**
+- C.01 **Playmate Ball Machines** (authorized SoCal sales & service)
+- C.02 **NEW: Playmate Ball Mowers** (also authorized — was conflated with ball machines)
+- C.03 **NEW: First Team Basketball Backboards** (authorized distributor — was generic "basketball backboards")
+- C.04 Volleyball / Paddle / Pickleball (combo posts, sleeves, USAPA-compliant pickleball conversion)
+- C.05 **NEW: How to Measure & Install Windscreen** (free in-house resource — was missing)
+
+### Distributors band added
+A new dedicated section after Capabilities — heading: **"THE BRANDS WE CARRY, NOT WHERE THE WORK LIVES."** — three cards for Edwards (England, since 1884), Playmate (authorized SoCal), and First Team (authorized distributor). This separates the "what we stock and service" from the "where we installed" question, which the first pass conflated.
+
+### Venue marquee corrected
+Removed Edwards + Playmate (they're not places NJP installed — they're brands NJP carries). Added Harvard-Westlake (custom batting cage), Sunset Hills T.C. (mesh logo print), Malibu (closed-mesh awning), and the LA / Orange / Ventura tri-county service tag.
+
+### Installs gallery expanded
+Added four text-only callouts beneath the photo gallery for Harvard-Westlake (school batting cage), Sunset Hills T.C. (logo print), Malibu (residence), and Baseball Field (printed blue vinyl). Re-captioned the U. of Redlands photo to call out that the image actually shows a printed-vinyl Farquhar Field outfield wall — a real printed-screens receipt.
+
+### Process section expanded
+Added a **"How to Measure & Install Windscreen"** free-resource callout (the actual notes NJP hands to its crews — tension-bar to tension-bar, no panel longer than 50–60′, plan seams to land on a fence post, standard heights 3′ / 6′ / 8′ / 10′ / 12′ measured from valley to valley of the chainlink diamonds), plus a service-area block clarifying the difference between **screen install (Greater LA)** vs **net & post install (LA / OC / Ventura)** vs **shipping (worldwide)** vs **samples (by mail)**.
+
+### Nav update
+Added a **BRANDS** link to the desktop nav for the new Distributors section anchor (`#brands`).
+
+### Accuracy callout removed
+The Round 1 mesh wind-block ratios ("~70% open / ~95% closed") were industry typicals, not NJP-quoted figures. Replaced with descriptive copy that matches what the source site actually says about visibility behind open vs. closed mesh.
 
 ## Production Notes
 
