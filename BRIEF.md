@@ -1,6 +1,8 @@
 # NJP Sports Inc — Design Brief
 
-> **Round 2 update:** First pass under-represented the catalog and incorrectly placed Edwards + Playmate in the "where the work lives" marquee. Capabilities expanded from 10 cards to a 17-line catalog organized in three groups; venue marquee now lists only real install locations; new dedicated **Distributors** band carries Edwards / Playmate / First Team. See bottom of file for the full Round 2 changelog.
+> **Round 3 update — Catalog Edition:** Two directions now live behind a selector page. Editorial Edition (Round 2) is preserved at `direction-editorial.html`; the new Catalog Edition (`direction-catalog.html`) goes deep on every published SKU with modal price-list popups, dense scannable tables, and direct links to the source pages. See bottom of file for the Round 3 changelog.
+>
+> **Round 2 update:** First pass under-represented the catalog and incorrectly placed Edwards + Playmate in the "where the work lives" marquee. Capabilities expanded from 10 cards to a 17-line catalog organized in three groups; venue marquee now lists only real install locations; new dedicated **Distributors** band carries Edwards / Playmate / First Team.
 
 
 
@@ -129,6 +131,82 @@ Auto-generation skipped this build (Grok / Gemini API keys not set in this sessi
 | **Total before publish** | **~6m 45s** |
 
 PUBLISH and DELIVER timings appended to delivery message.
+
+## Round 3 Changelog — Catalog Edition
+
+After Daddy asked for "another version, more detailed... highlight everything they offer and not just tennis. Link to any of their existing price lists if they have them or build a popup for each":
+
+### Folder restructure (CLAUDE.md "directions" pattern)
+- `index.html` &rarr; **selector page** with two cards (Editorial vs Catalog)
+- `direction-editorial.html` &mdash; the Round 2 build, preserved verbatim. URL still works for anyone who already has the link.
+- `direction-catalog.html` &mdash; new V2 build.
+
+### Data extraction
+Pulled every published SKU and price from the 19 source pages of `njpsports.com`. Headcount:
+- **Mesh + Vinyl + Polyester** &mdash; 16 SKUs (1100&ndash;1131) plus add-ons (1001&ndash;1003) and rolls (1118/20)
+- **Temporary / Construction Screen** &mdash; 5 SKUs (1118, 1121, 1122, 1123, 1124) with hard prices ($110&ndash;$290)
+- **Tennis Nets (Edwards + McGregor)** &mdash; 6 SKUs with hard prices ($15 strap &rarr; $350 40LS)
+- **Tennis Posts (Edwards Classic, Wimbledon, replacement gear)** &mdash; 4 SKUs ($135&ndash;$600)
+- **Court Cleaning** &mdash; 6 SKUs (waterbroom, hose, rollers) &mdash; call for prices
+- **Court Valets / Trash / Scorekeepers** &mdash; 4 SKUs ($35&ndash;$225)
+- **Umpire Chairs / Benches** &mdash; 3 SKUs ($400 plastic, $550 aluminum, chair call)
+- **Paddle Tennis** &mdash; 3 SKUs ($110, $210, $400)
+- **Volleyball** &mdash; 4 SKUs ($110, $125, $275, plus call)
+- **Basketball (First Team)** &mdash; 4 SKUs (Sport + Champ in 3&prime;&times;4&prime; / 3&prime;&times;5&prime;)
+- **Padding & Polycap** &mdash; 2 lines (4&Prime; polycap rolls + custom 2&Prime; foam padding)
+- **Baseball / Golf / Custom Netting** &mdash; #42 HDPE ($0.75/sq ft raw, 5+ premade cage sizes), #36 Nylon, #21 sport netting, golf knotless + olefin bales
+
+### Layout pattern: trade catalog density
+- Hero swaps from "vibe" to **stats**: 55 years / 17 lines / 100+ SKUs / WW
+- Quick-jump TOC pill bar &mdash; 18 anchor links to every section, sticky-feeling at the top
+- Each product line is a card with a left-side dark intro (LINE NN, name, narrative, regulation specs) and a right-side dense SKU table
+- Six groups: 1 Fabrics &middot; 2 Tennis Equipment &middot; 3 Ball Machines/Mowers &middot; 4 Other Sports &middot; 5 Netting &middot; 6 Resources/Distributors
+- Marquee divider repurposed: "100+ SKUS PUBLISHED &middot; 17 PRODUCT LINES &middot; 6 SPORTS &middot; 3 AUTHORIZED BRANDS &middot; SHIPS WORLDWIDE &middot; SAMPLES BY MAIL"
+
+### Modal popup &mdash; full Mesh Screen price list
+The first capability card has a **"FULL PRICE LIST + ADD-ONS &rarr;"** button that opens a vanilla-JS modal with:
+- Custom Mesh & Polyester table (7 SKUs with density / heights / per-sq-ft prices)
+- Add-Ons table (3 SKUs)
+- Privacy Rolls table (1 SKU pair)
+- Vinyl table (8 colors with available heights)
+- Hardware list (10 attachment items NJP carries)
+
+Modal mechanics:
+- Tap card button or `data-modal="modal-mesh"` to open
+- Click backdrop, click &times;, or press Escape to close
+- Body scroll locks via `body.modal-open { overflow: hidden }`
+- Keyframe animation on the panel (`translateY(20px) &rarr; 0`) wrapped in `prefers-reduced-motion: no-preference`
+- Mobile: tables become horizontally scrollable inside `.sku-table-wrap` divs (337px viewport &rarr; 480px min-width tables scroll cleanly)
+
+The Mesh modal is the proof-of-concept; the same pattern can be replicated for any other line. For now, lines without a modal link directly to their source page on `njpsports.com` so users can read the full live version (these source pages get updated whenever NJP changes prices &mdash; see ACCURACY.md note that `nets.html` was updated 2026-03-25).
+
+### Source-page links throughout
+Every product card has a "SOURCE PAGE &nearr;" link pointing to the corresponding live page on `njpsports.com`. Two reasons:
+1. **Honesty**: NJP IS keeping their site current; if our cached prices drift, the link goes to the live source.
+2. **Useful linking page fallback** for any product line whose modal we haven't built yet &mdash; user clicks through to the original.
+
+### Cross-sport equality
+Catalog Edition gives equal visual weight to non-tennis lines:
+- Volleyball gets a full SKU table with VB&nbsp;1000 ($125) and VB&nbsp;1500 Supreme ($275)
+- Paddle / Pickleball gets its own card with the PT28 ($210) plus pickleball net call-out
+- Basketball gets Sport + Champ models with First Team distributor framing
+- Baseball/Golf netting is a full-block treatment with #42 HDPE specs (380D, 220 lb tensile, premade cage sizes), #36 Nylon, sport-specific square sizes, golf cages + olefin bales
+
+### Selector page (new index.html)
+- "Pick your edition" headline
+- Two equal-weight cards: Editorial (Indian Wells photo, archival treatment, "vibe-led") vs Catalog (six-cell SKU sample tile with $0.85 / $350 / $590 / $225 / $525&ndash;650 / $125, "SKU-led")
+- Three footnote cards: Source (njpsports.com + GoLive 5 + Apache 2.0.54 + Wayback 1999-04-27), Project (Banana Bytes), Contact (800-773-4657 + email)
+
+### Build Timing &mdash; Round 3
+| Phase | Duration |
+|---|---|
+| Re-scrape source pages, extract every SKU + price | ~2m |
+| Restructure folder (rename V1 to direction-editorial) | ~10s |
+| Build `direction-catalog.html` (820+ lines, 18 product cards, modal) | ~6m |
+| Build new `index.html` selector page | ~2m |
+| Verify in preview, fix modal opacity bug, fix table mobile overflow | ~1m 30s |
+| Update BRIEF / ACCURACY | ~45s |
+| **Round 3 total** | **~12m** |
 
 ## Round 2 Changelog
 
