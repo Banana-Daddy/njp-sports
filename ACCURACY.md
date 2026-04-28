@@ -65,7 +65,7 @@ Pulled directly from the source site and confirmed in the mockup:
 Items written to fill gaps where the source site is silent. Confirm or replace before client delivery:
 
 - **Hours: Mon–Fri 7am–4pm Pacific** — *Sourced from external listing (Yelp result in Web Search)*. Not stated on the source site itself. Confirm with NJP directly before any client uses these hours.
-- **"54 years" since-1971 stat** — derived from current year (2026) minus 1971 = 55. The site copy says "over 50 years"; mockup uses **54** rounded to the most recent full-year figure assuming 1971 founding mid-year. Could be 54 or 55; either is honest. If founder records show a specific month, swap.
+- ~~**"54 years" since-1971 stat**~~ — *fixed.* 2026 - 1971 = **55**. Updated in two prose references in `index.html` ("Fifty-five years on the same Glendale workshop floor" and "we've been hitting it for fifty-five years"). The site copy says "over 50 years" which is consistent.
 - ~~**Mesh wind-block ratios "~70% (open) / ~95% (closed)"**~~ — *removed in Round 2.* Replaced the percentages with descriptive copy ("Background w/ visibility" / "Cuts the view behind") that matches what the source site actually says about open vs. closed mesh, since the percentage figures weren't NJP-quoted.
 - **"Same numbers as 1996. Same workshop as 1971."** — copy I wrote for the contact section. Numbers and address match what's on the current site, but I can't independently verify they are unchanged since 1996. Confirm.
 - **Tagline "WINDSCREEN & TENNIS SPECIALISTS."** — derived from "Windscreen and Tennis Specialists" (homepage h2) and "Windscreen & Tennis Accessories" (subpage banner). I joined the two and uppercased. Faithful but not a direct quote.
