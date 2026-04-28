@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>NJP Sports Inc — Windscreen &amp; Tennis Court Specialists · Glendale, CA · Since 1971</title>
+<meta name="description" content="Custom-fabricated windscreen and tennis court equipment for clubs, parks, schools, and homeowners across Greater Los Angeles since 1971. Edwards nets, Playmate ball machines, ships worldwide.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NJP Sports Inc">
+<meta property="og:title" content="NJP Sports Inc — Windscreen &amp; Tennis Specialists · Since 1971">
+<meta property="og:description" content="Custom-fabricated windscreen and tennis court equipment in Glendale, California. Family-run since 1971. Edwards nets, Playmate ball machines, installs from Indian Wells to Pepperdine.">
+<meta property="og:url" content="https://banana-daddy.github.io/njp-sports/">
+<meta property="og:image" content="https://banana-daddy.github.io/njp-sports/images/og.jpg">
+<meta property="og:image:secure_url" content="https://banana-daddy.github.io/njp-sports/images/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Indian Wells Tennis Stadium with NJP Sports installed windscreen">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NJP Sports Inc — Windscreen &amp; Tennis Specialists · Since 1971">
+<meta name="twitter:description" content="Custom-fabricated windscreen and tennis court equipment in Glendale, California. Family-run since 1971.">
+<meta name="twitter:image" content="https://banana-daddy.github.io/njp-sports/images/og.jpg">
+<meta name="twitter:image:alt" content="Indian Wells Tennis Stadium with NJP Sports installed windscreen">
+
+<!-- Theme + Favicon + Canonical -->
+<meta name="theme-color" content="#0E1410">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" sizes="512x512" href="images/favicon-512.png">
+<link rel="canonical" href="https://banana-daddy.github.io/njp-sports/">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500;6..72,600;6..72,700&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0E1410',
+          bone: '#F4F1EA',
+          paper: '#EDE7DA',
+          stadium: '#1F3D2A',
+          stadiumDk: '#152C1E',
+          tape: '#C2422A',
+          tapeDk: '#9C2F1B',
+          asphalt: '#5C5950',
+          dust: '#9A958A'
+        },
+        fontFamily: {
+          display: ['"Bebas Neue"', 'Impact', 'sans-serif'],
+          serif: ['Newsreader', 'Georgia', 'serif'],
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body {
+    background: #F4F1EA;
+    color: #0E1410;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Subtle paper grain */
+  .paper-grain {
+    position: relative;
+  }
+  .paper-grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.05  0 0 0 0 0.08  0 0 0 0 0.06  0 0 0 0.18 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/></svg>");
+    mix-blend-mode: multiply;
+    opacity: 0.35;
+  }
+
+  /* Chain-link mesh — signature move */
+  .chainlink {
+    background-image:
+      linear-gradient(45deg, transparent 46%, rgba(14,20,16,0.18) 47%, rgba(14,20,16,0.18) 53%, transparent 54%),
+      linear-gradient(-45deg, transparent 46%, rgba(14,20,16,0.18) 47%, rgba(14,20,16,0.18) 53%, transparent 54%);
+    background-size: 22px 22px;
+    background-position: 0 0;
+  }
+  .chainlink-light {
+    background-image:
+      linear-gradient(45deg, transparent 46%, rgba(244,241,234,0.10) 47%, rgba(244,241,234,0.10) 53%, transparent 54%),
+      linear-gradient(-45deg, transparent 46%, rgba(244,241,234,0.10) 47%, rgba(244,241,234,0.10) 53%, transparent 54%);
+    background-size: 22px 22px;
+  }
+  .chainlink-bold {
+    background-image:
+      linear-gradient(45deg, transparent 45%, rgba(14,20,16,0.32) 46%, rgba(14,20,16,0.32) 54%, transparent 55%),
+      linear-gradient(-45deg, transparent 45%, rgba(14,20,16,0.32) 46%, rgba(14,20,16,0.32) 54%, transparent 55%);
+    background-size: 28px 28px;
+  }
+
+  /* Archival photo treatment — unifies the messy 90s CDN images */
+  .archival {
+    filter: grayscale(0.85) contrast(1.08) brightness(0.96) sepia(0.18);
+  }
+  .archival-strong {
+    filter: grayscale(1) contrast(1.18) brightness(0.88) sepia(0.22);
+  }
+
+  /* Display type tightening */
+  .display-tight {
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    line-height: 0.86;
+    letter-spacing: 0.005em;
+  }
+
+  /* Editorial pull-quote serif */
+  .pullquote {
+    font-family: 'Newsreader', Georgia, serif;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+  }
+
+  /* Eyebrow / spec / caption */
+  .eyebrow {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* Marquee */
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 60s linear infinite;
+    will-change: transform;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; }
+  }
+
+  /* Reveal on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 800ms cubic-bezier(.2,.7,.2,1), transform 800ms cubic-bezier(.2,.7,.2,1);
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  /* Hover lift for capability + gallery cards */
+  .lift {
+    transition: transform 280ms cubic-bezier(.2,.7,.2,1), box-shadow 280ms ease, border-color 280ms ease;
+  }
+  .lift:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px -22px rgba(14,20,16,0.40);
+  }
+
+  /* Net pattern — for the stat blocks */
+  .netlines {
+    background-image:
+      linear-gradient(to right, rgba(244,241,234,0.10) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(244,241,234,0.10) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* Diagonal stripe — for the heritage tag */
+  .stripe-diag {
+    background-image: repeating-linear-gradient(
+      135deg,
+      #C2422A 0,
+      #C2422A 8px,
+      #9C2F1B 8px,
+      #9C2F1B 16px
+    );
+  }
+
+  /* Numerals lining */
+  .lining-nums { font-variant-numeric: lining-nums tabular-nums; }
+
+  /* Custom underline for inline links */
+  .ulink {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    transition: background-size 280ms ease;
+  }
+  .ulink:hover { background-size: 100% 2px; }
+
+  /* Section eyebrow rule */
+  .eyebrow-rule {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+  }
+  .eyebrow-rule::before {
+    content: '';
+    width: 28px; height: 1px;
+    background: currentColor; opacity: 0.5;
+  }
+
+  /* Vintage brand mark frame */
+  .markframe {
+    background: #1F3D2A;
+    border: 1px solid #1F3D2A;
+    box-shadow: inset 0 0 0 4px #F4F1EA, inset 0 0 0 5px #1F3D2A;
+  }
+</style>
+</head>
+<body class="bg-bone text-ink antialiased selection:bg-tape selection:text-bone">
+
+<!-- ===== Top "wire" with monospace heritage anchor ===== -->
+<div class="bg-ink text-bone/80 border-b border-bone/10">
+  <div class="max-w-[1440px] mx-auto px-4 md:px-8 py-2 flex items-center justify-between gap-4">
+    <div class="eyebrow flex items-center gap-3 text-bone/70">
+      <span class="hidden sm:inline">EST. MCMLXXI</span>
+      <span class="text-tape">●</span>
+      <span>GLENDALE · CA</span>
+    </div>
+    <div class="eyebrow flex items-center gap-3 text-bone/70">
+      <span class="hidden md:inline">CONTRACTOR'S LIC No. 284844 C-13</span>
+      <span class="hidden md:inline text-bone/30">/</span>
+      <a href="tel:18007734657" class="text-bone hover:text-tape transition-colors">800-773-4657</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Sticky floating nav ===== -->
+<header class="sticky top-3 md:top-5 z-50 px-3 md:px-6">
+  <div class="max-w-[1440px] mx-auto rounded-md border border-ink/10 bg-bone/85 backdrop-blur-md shadow-[0_6px_30px_-18px_rgba(14,20,16,0.4)]">
+    <nav class="flex items-center justify-between gap-3 px-3 md:px-5 py-2.5">
+      <a href="#" class="flex items-center gap-3 group">
+        <span class="markframe inline-flex items-center justify-center w-9 h-9 md:w-10 md:h-10 rounded-sm overflow-hidden">
+          <img src="images/favicon.png" alt="NJP Sports tennis player mark" class="w-full h-full object-cover" loading="eager">
+        </span>
+        <span class="leading-none">
+          <span class="block display-tight text-2xl md:text-[28px] tracking-wide">NJP SPORTS</span>
+          <span class="block eyebrow text-asphalt mt-0.5 text-[10px]">WINDSCREEN &amp; TENNIS · EST. 1971</span>
+        </span>
+      </a>
+      <div class="hidden lg:flex items-center gap-7 eyebrow text-ink/70">
+        <a href="#capabilities" class="hover:text-ink transition-colors">CAPABILITIES</a>
+        <a href="#installs" class="hover:text-ink transition-colors">INSTALLS</a>
+        <a href="#process" class="hover:text-ink transition-colors">PROCESS</a>
+        <a href="#contact" class="hover:text-ink transition-colors">CONTACT</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-2 eyebrow bg-ink text-bone px-3.5 py-2 rounded-sm hover:bg-stadium transition-colors">
+          REQUEST A QUOTE
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="tel:18007734657" class="sm:hidden eyebrow bg-ink text-bone px-3 py-2 rounded-sm">CALL</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="relative paper-grain overflow-hidden">
+  <div class="max-w-[1440px] mx-auto px-4 md:px-8 pt-10 md:pt-16 pb-8 md:pb-14 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-end">
+
+    <!-- Type column -->
+    <div class="md:col-span-7 lg:col-span-7 relative z-10">
+      <div class="eyebrow eyebrow-rule text-asphalt mb-5 md:mb-7">SPECIALISTS · SINCE 1971</div>
+
+      <h1 class="display-tight text-ink text-[68px] sm:text-[96px] md:text-[120px] lg:text-[148px] xl:text-[168px]">
+        WINDSCREEN<br>
+        <span class="text-stadium">&amp; TENNIS</span><br>
+        <span class="text-ink">SPECIALISTS.</span>
+      </h1>
+
+      <p class="pullquote mt-6 md:mt-8 text-2xl md:text-[28px] text-ink/85 max-w-[44ch]">
+        &ldquo;Custom-fabricated windscreen and tennis court equipment from a Glendale workshop, installed across the greater Los Angeles area &mdash; and shipped worldwide.&rdquo;
+      </p>
+
+      <div class="mt-7 md:mt-9 flex flex-wrap items-center gap-3 md:gap-4">
+        <a href="#contact" class="eyebrow inline-flex items-center gap-2.5 bg-ink text-bone px-5 py-3.5 rounded-sm hover:bg-stadium transition-colors">
+          REQUEST SAMPLES &amp; QUOTE
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="tel:18007734657" class="eyebrow inline-flex items-center gap-2.5 border border-ink/25 text-ink px-5 py-3.5 rounded-sm hover:border-ink hover:bg-ink/5 transition-colors">
+          800-773-4657
+        </a>
+        <span class="eyebrow text-asphalt ml-1">MON–FRI · 7A–4P PT</span>
+      </div>
+
+      <!-- Specs strip -->
+      <dl class="mt-10 md:mt-12 grid grid-cols-3 gap-4 md:gap-6 max-w-xl border-t border-ink/15 pt-6">
+        <div>
+          <dt class="eyebrow text-asphalt">YEARS</dt>
+          <dd class="display-tight text-4xl md:text-5xl mt-1 lining-nums">54</dd>
+          <p class="text-xs text-asphalt mt-1">In business since 1971</p>
+        </div>
+        <div>
+          <dt class="eyebrow text-asphalt">ONLINE</dt>
+          <dd class="display-tight text-4xl md:text-5xl mt-1 lining-nums">'96</dd>
+          <p class="text-xs text-asphalt mt-1">On the web since</p>
+        </div>
+        <div>
+          <dt class="eyebrow text-asphalt">SHIPS</dt>
+          <dd class="display-tight text-4xl md:text-5xl mt-1">WW</dd>
+          <p class="text-xs text-asphalt mt-1">Worldwide delivery</p>
+        </div>
+      </dl>
+    </div>
+
+    <!-- Photo column -->
+    <div class="md:col-span-5 lg:col-span-5 relative">
+      <figure class="relative">
+        <div class="absolute -top-3 -left-3 md:-top-4 md:-left-4 w-20 h-20 md:w-28 md:h-28 chainlink-bold rounded-sm pointer-events-none"></div>
+        <div class="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden rounded-sm border border-ink/15 bg-stadiumDk">
+          <img src="images/Indian_Wells_Stadium.jpg" alt="Indian Wells Tennis Garden stadium court with installed windscreen" class="w-full h-full object-cover archival-strong scale-[1.04]" loading="eager">
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/55 via-transparent to-transparent"></div>
+          <figcaption class="absolute bottom-3 left-3 right-3 md:bottom-4 md:left-4 md:right-4 text-bone">
+            <span class="eyebrow text-bone/80 block">SELECT INSTALL · 01</span>
+            <span class="block mt-1 text-base md:text-lg font-medium tracking-tight">Indian Wells Tennis Garden, Stadium Court</span>
+            <span class="block text-xs text-bone/70">Coachella Valley, CA</span>
+          </figcaption>
+        </div>
+        <div class="absolute -bottom-3 -right-3 md:-bottom-4 md:-right-4 w-24 h-24 md:w-32 md:h-32 chainlink-bold rounded-sm pointer-events-none"></div>
+      </figure>
+    </div>
+  </div>
+
+  <!-- Hero base rule -->
+  <div class="border-t border-ink/15"></div>
+</section>
+
+<!-- ===== Heritage marquee ===== -->
+<section class="bg-ink text-bone py-8 md:py-10 overflow-hidden border-y border-ink">
+  <div class="max-w-[1440px] mx-auto px-4 md:px-8 mb-6 flex flex-wrap items-baseline justify-between gap-4">
+    <div>
+      <p class="eyebrow text-bone/60 mb-2">RECEIPTS</p>
+      <h2 class="display-tight text-3xl md:text-5xl">A short list of where the work lives.</h2>
+    </div>
+    <p class="text-sm md:text-base text-bone/65 max-w-md pullquote">
+      Stadium courts, club courts, university programs, private hillside courts, public parks, school yards, batting cages, driving ranges. Greater LA install. Shipping worldwide since long before the internet.
+    </p>
+  </div>
+
+  <div class="relative">
+    <div class="absolute inset-y-0 left-0 w-24 md:w-40 bg-gradient-to-r from-ink to-transparent z-10 pointer-events-none"></div>
+    <div class="absolute inset-y-0 right-0 w-24 md:w-40 bg-gradient-to-l from-ink to-transparent z-10 pointer-events-none"></div>
+    <div class="marquee-track gap-12 md:gap-16 py-3">
+      <!-- Set A -->
+      <div class="flex shrink-0 items-center gap-12 md:gap-16">
+        <span class="display-tight text-3xl md:text-5xl">INDIAN WELLS</span><span class="text-tape text-2xl md:text-4xl">●</span>
+        <span class="display-tight text-3xl md:text-5xl text-bone/60">PEPPERDINE</span><span class="text-bone/30">/</span>
+        <span class="display-tight text-3xl md:text-5xl">UCLA · LA OPEN</span><span class="text-tape text-2xl md:text-4xl">●</span>
+        <span class="display-tight text-3xl md:text-5xl text-bone/60">STUDIO CITY G&amp;T</span><span class="text-bone/30">/</span>
+        <span class="display-tight text-3xl md:text-5xl">U. OF REDLANDS</span><span class="text-tape text-2xl md:text-4xl">●</span>
+        <span class="display-tight text-3xl md:text-5xl text-bone/60">HOLLYWOOD HILLS</span><span class="text-bone/30">/</span>
+        <span class="display-tight text-3xl md:text-5xl">EDWARDS · WIMBLEDON</span><span class="text-tape text-2xl md:text-4xl">●</span>
+        <span class="display-tight text-3xl md:text-5xl text-bone/60">PLAYMATE TENNIS</span><span class="text-bone/30">/</span>
+      </div>
+      <!-- Set B (duplicate for seamless loop) -->
+      <div class="flex shrink-0 items-center gap-12 md:gap-16" aria-hidden="true">
+        <span class="display-tight text-3xl md:text-5xl">INDIAN WELLS</span><span class="text-tape text-2xl md:text-4xl">●</span>
+        <span class="display-tight text-3xl md:text-5xl text-bone/60">PEPPERDINE</span><span class="text-bone/30">/</span>
+        <span class="display-tight text-3xl md:text-5xl">UCLA · LA OPEN</span><span class="text-tape text-2xl md:text-4xl">●</span>
+        <span class="display-tight text-3xl md:text-5xl text-bone/60">STUDIO CITY G&amp;T</span><span class="text-bone/30">/</span>
+        <span class="display-tight text-3xl md:text-5xl">U. OF REDLANDS</span><span class="text-tape text-2xl md:text-4xl">●</span>
+        <span class="display-tight text-3xl md:text-5xl text-bone/60">HOLLYWOOD HILLS</span><span class="text-bone/30">/</span>
+        <span class="display-tight text-3xl md:text-5xl">EDWARDS · WIMBLEDON</span><span class="text-tape text-2xl md:text-4xl">●</span>
+        <span class="display-tight text-3xl md:text-5xl text-bone/60">PLAYMATE TENNIS</span><span class="text-bone/30">/</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Capabilities (bento) ===== -->
+<section id="capabilities" class="bg-bone py-16 md:py-24 paper-grain">
+  <div class="max-w-[1440px] mx-auto px-4 md:px-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 mb-10 md:mb-14 items-end">
+      <div class="md:col-span-7">
+        <p class="eyebrow eyebrow-rule text-asphalt mb-4">CAPABILITIES · 01–10</p>
+        <h2 class="display-tight text-5xl md:text-7xl lg:text-8xl text-ink leading-[0.92]">Made in Glendale.<br><span class="text-stadium">Installed where it matters.</span></h2>
+      </div>
+      <div class="md:col-span-5">
+        <p class="pullquote text-xl md:text-2xl text-ink/80">
+          Wholesale supplier &mdash; manufacturer &mdash; contractor. Custom screens cut, hemmed, and grommeted on the floor. Tennis posts and nets installed on the court. Court cleaning, ball machines, and accessories shipped from inventory.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 md:gap-5">
+
+      <!-- 01 — Mesh Screen (tall feature card) -->
+      <a href="#installs" class="lift sm:col-span-2 lg:col-span-6 lg:row-span-2 group block bg-stadium text-bone rounded-sm overflow-hidden relative">
+        <div class="absolute inset-0 chainlink-light opacity-80 pointer-events-none"></div>
+        <div class="relative h-full p-7 md:p-10 flex flex-col justify-between min-h-[340px] lg:min-h-[480px]">
+          <div>
+            <p class="eyebrow text-bone/70 mb-3">CAPABILITY · 01</p>
+            <h3 class="display-tight text-5xl md:text-7xl">MESH<br>SCREEN.</h3>
+            <p class="mt-4 text-bone/85 max-w-md text-base md:text-lg">
+              Open and closed knit polyethylene. Custom heights up to 15&prime;, hemmed, brass-grommeted, taped. Visibility you choose &mdash; from a faint silhouette behind open mesh to a near-solid backdrop in closed mesh.
+            </p>
+          </div>
+          <div class="grid grid-cols-3 gap-3 mt-6 max-w-md">
+            <div class="bg-bone/10 rounded-sm p-3">
+              <p class="eyebrow text-bone/60 mb-1">OPEN</p>
+              <p class="text-sm">~70% wind block</p>
+            </div>
+            <div class="bg-bone/10 rounded-sm p-3">
+              <p class="eyebrow text-bone/60 mb-1">CLOSED</p>
+              <p class="text-sm">~95% block</p>
+            </div>
+            <div class="bg-bone/10 rounded-sm p-3">
+              <p class="eyebrow text-bone/60 mb-1">HEIGHTS</p>
+              <p class="text-sm">6&prime; · 9&prime; · 12&prime; · 15&prime;</p>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- 02 — Vinyl Screen -->
+      <a href="#installs" class="lift lg:col-span-3 group block bg-ink text-bone rounded-sm overflow-hidden relative">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="images/VINYLHILLSIDE2.jpg" alt="Green vinyl windscreen installed on a hillside court fence" class="w-full h-full object-cover archival">
+        </div>
+        <div class="p-5 md:p-6">
+          <p class="eyebrow text-bone/60 mb-2">CAPABILITY · 02</p>
+          <h3 class="display-tight text-3xl md:text-4xl">VINYL SCREEN</h3>
+          <p class="text-sm text-bone/75 mt-2">Solid backdrop, full privacy. Coated vinyl in green, beige, blue, black. Built for the long sun.</p>
+        </div>
+      </a>
+
+      <!-- 03 — Tennis Nets (Edwards) -->
+      <a href="#installs" class="lift lg:col-span-3 group block bg-bone border border-ink/15 text-ink rounded-sm overflow-hidden relative">
+        <div class="aspect-[4/3] overflow-hidden bg-stadiumDk">
+          <img src="images/40ls.jpg" alt="Edwards 40LS tennis net installed on classic black posts" class="w-full h-full object-cover archival">
+        </div>
+        <div class="p-5 md:p-6">
+          <p class="eyebrow text-asphalt mb-2">CAPABILITY · 03</p>
+          <h3 class="display-tight text-3xl md:text-4xl">TENNIS NETS</h3>
+          <p class="text-sm text-asphalt mt-2">Edwards of England &mdash; tennis net specialists since 1884. As used at Wimbledon, the Olympics, and on the ATP tour.</p>
+        </div>
+      </a>
+
+      <!-- 04 — Tennis Posts -->
+      <a href="#installs" class="lift lg:col-span-3 group block bg-bone border border-ink/15 text-ink rounded-sm overflow-hidden relative">
+        <div class="aspect-[4/3] overflow-hidden bg-paper">
+          <img src="images/BWEdwardsP.jpg" alt="Edwards classic black tennis posts" class="w-full h-full object-cover archival">
+        </div>
+        <div class="p-5 md:p-6">
+          <p class="eyebrow text-asphalt mb-2">CAPABILITY · 04</p>
+          <h3 class="display-tight text-3xl md:text-4xl">TENNIS POSTS</h3>
+          <p class="text-sm text-asphalt mt-2">Edwards Classic round 3&Prime; steel with internal brass winder. Sleeves set to 42&prime;6&Prime;–43&prime; for doubles.</p>
+        </div>
+      </a>
+
+      <!-- 05 — Court Cleaning -->
+      <a href="#installs" class="lift lg:col-span-3 group block bg-paper border border-ink/15 text-ink rounded-sm overflow-hidden relative">
+        <div class="aspect-[4/3] overflow-hidden bg-bone">
+          <img src="images/9jetb.jpg" alt="Standard 9-jet waterbroom for tennis court cleaning" class="w-full h-full object-cover archival">
+        </div>
+        <div class="p-5 md:p-6">
+          <p class="eyebrow text-asphalt mb-2">CAPABILITY · 05</p>
+          <h3 class="display-tight text-3xl md:text-4xl">COURT CLEANING</h3>
+          <p class="text-sm text-asphalt mt-2">9-jet waterbrooms, non-scuff hose, foam court rollers. The kit clubs reorder year after year.</p>
+        </div>
+      </a>
+
+      <!-- 06 — Ball Machines (Playmate) -->
+      <a href="https://www.playmatetennis.com/products/" target="_blank" rel="noopener" class="lift lg:col-span-6 group block bg-ink text-bone rounded-sm overflow-hidden relative">
+        <div class="grid grid-cols-2 h-full">
+          <div class="p-5 md:p-7 flex flex-col justify-between">
+            <div>
+              <p class="eyebrow text-bone/60 mb-2">CAPABILITY · 06</p>
+              <h3 class="display-tight text-3xl md:text-4xl lg:text-5xl">BALL MACHINES</h3>
+              <p class="text-sm text-bone/75 mt-2 max-w-sm">Authorized Playmate sales &amp; service for Southern California. Demos, parts, repairs, on-site or by ship.</p>
+            </div>
+            <p class="eyebrow text-tape mt-4 group-hover:translate-x-1 transition-transform">PLAYMATE.COM →</p>
+          </div>
+          <div class="bg-stadiumDk aspect-square md:aspect-auto overflow-hidden chainlink-light relative">
+            <div class="absolute inset-0 grid place-items-center">
+              <span class="display-tight text-bone/95 text-6xl md:text-7xl lg:text-8xl tracking-wide text-center leading-[0.85]">PLAY<br>MATE</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- 07 — Padding & Polycap -->
+      <a href="#installs" class="lift sm:col-span-1 lg:col-span-3 group block bg-bone border border-ink/15 text-ink rounded-sm overflow-hidden">
+        <div class="p-5 md:p-6">
+          <p class="eyebrow text-asphalt mb-2">CAPABILITY · 07</p>
+          <h3 class="display-tight text-3xl md:text-4xl">PADDING &amp;<br>POLYCAP</h3>
+          <p class="text-sm text-asphalt mt-2">Wall padding, post padding, fence-cap polycap. Safety where the sport meets the steel.</p>
+        </div>
+      </a>
+
+      <!-- 08 — Baseball/Golf Netting -->
+      <a href="#installs" class="lift sm:col-span-1 lg:col-span-3 group block bg-bone border border-ink/15 text-ink rounded-sm overflow-hidden">
+        <div class="p-5 md:p-6">
+          <p class="eyebrow text-asphalt mb-2">CAPABILITY · 08</p>
+          <h3 class="display-tight text-3xl md:text-4xl">BASEBALL &amp;<br>GOLF NETTING</h3>
+          <p class="text-sm text-asphalt mt-2">Outfield screen, batting cage net, range netting. Heavy-duty HDPE knot or knotless.</p>
+        </div>
+      </a>
+
+      <!-- 09 — Volleyball / Paddle / Pickleball -->
+      <a href="#installs" class="lift sm:col-span-1 lg:col-span-3 group block bg-bone border border-ink/15 text-ink rounded-sm overflow-hidden">
+        <div class="p-5 md:p-6">
+          <p class="eyebrow text-asphalt mb-2">CAPABILITY · 09</p>
+          <h3 class="display-tight text-3xl md:text-4xl">VOLLEY · PADDLE · PICKLE</h3>
+          <p class="text-sm text-asphalt mt-2">Combo posts, sleeves, nets &amp; conversions. Four pickleball courts to a tennis court &mdash; we lay it out.</p>
+        </div>
+      </a>
+
+      <!-- 10 — Umpire Chairs / Benches -->
+      <a href="#installs" class="lift sm:col-span-1 lg:col-span-3 group block bg-bone border border-ink/15 text-ink rounded-sm overflow-hidden">
+        <div class="p-5 md:p-6">
+          <p class="eyebrow text-asphalt mb-2">CAPABILITY · 10</p>
+          <h3 class="display-tight text-3xl md:text-4xl">CHAIRS &amp;<br>BENCHES</h3>
+          <p class="text-sm text-asphalt mt-2">Aluminum umpire chairs, polyurethane court benches, valets, court trash cans. Stocked.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Stat band — net dimensions as design ===== -->
+<section class="bg-stadium text-bone relative overflow-hidden">
+  <div class="absolute inset-0 netlines opacity-50 pointer-events-none"></div>
+  <div class="relative max-w-[1440px] mx-auto px-4 md:px-8 py-14 md:py-20 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
+
+    <div class="md:col-span-5">
+      <p class="eyebrow text-bone/60 eyebrow-rule mb-4">REGULATION · TENNIS</p>
+      <h2 class="display-tight text-5xl md:text-7xl leading-[0.9]">A net is 42&prime; wide,<br>3&prime;6&Prime; on the sides,<br><span class="text-tape">3&prime; in the middle.</span></h2>
+      <p class="pullquote text-bone/85 text-xl md:text-2xl mt-6 max-w-lg">
+        Set sleeves 42&prime;6&Prime; to 43&prime; apart. Cement them 30&Prime; deep with a 2&prime;&times;2&prime; footing. Anchor the center strap between them. The geometry doesn&rsquo;t change &mdash; we&rsquo;ve been hitting it for fifty-four years.
+      </p>
+    </div>
+
+    <div class="md:col-span-7 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 self-end">
+      <div class="border border-bone/20 rounded-sm p-4 md:p-5">
+        <p class="eyebrow text-bone/55 mb-1">NET WIDTH</p>
+        <p class="display-tight text-4xl md:text-5xl lining-nums">42&prime;</p>
+        <p class="text-xs text-bone/65 mt-1">Doubles court</p>
+      </div>
+      <div class="border border-bone/20 rounded-sm p-4 md:p-5">
+        <p class="eyebrow text-bone/55 mb-1">SIDE HEIGHT</p>
+        <p class="display-tight text-4xl md:text-5xl lining-nums">3&prime;6&Prime;</p>
+        <p class="text-xs text-bone/65 mt-1">At post</p>
+      </div>
+      <div class="border border-bone/20 rounded-sm p-4 md:p-5">
+        <p class="eyebrow text-bone/55 mb-1">CENTER</p>
+        <p class="display-tight text-4xl md:text-5xl lining-nums">3&prime;0&Prime;</p>
+        <p class="text-xs text-bone/65 mt-1">After strap</p>
+      </div>
+      <div class="border border-bone/20 rounded-sm p-4 md:p-5">
+        <p class="eyebrow text-bone/55 mb-1">SLEEVE SPAN</p>
+        <p class="display-tight text-4xl md:text-5xl lining-nums">43&prime;</p>
+        <p class="text-xs text-bone/65 mt-1">Outside-to-outside</p>
+      </div>
+      <div class="border border-bone/20 rounded-sm p-4 md:p-5">
+        <p class="eyebrow text-bone/55 mb-1">POST DIAMETER</p>
+        <p class="display-tight text-4xl md:text-5xl lining-nums">3&Prime;</p>
+        <p class="text-xs text-bone/65 mt-1">Edwards Classic</p>
+      </div>
+      <div class="border border-bone/20 rounded-sm p-4 md:p-5">
+        <p class="eyebrow text-bone/55 mb-1">SLEEVE DEPTH</p>
+        <p class="display-tight text-4xl md:text-5xl lining-nums">30&Prime;</p>
+        <p class="text-xs text-bone/65 mt-1">Below grade</p>
+      </div>
+      <div class="border border-bone/20 rounded-sm p-4 md:p-5">
+        <p class="eyebrow text-bone/55 mb-1">FOOTING</p>
+        <p class="display-tight text-4xl md:text-5xl lining-nums">2&prime;&sup2;</p>
+        <p class="text-xs text-bone/65 mt-1">Cement, square</p>
+      </div>
+      <div class="border border-bone/20 rounded-sm p-4 md:p-5 bg-tape/15 border-tape/40">
+        <p class="eyebrow text-tape mb-1">EDWARDS · EST.</p>
+        <p class="display-tight text-4xl md:text-5xl lining-nums">1884</p>
+        <p class="text-xs text-bone/65 mt-1">Wimbledon &middot; ATP</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Featured installs ===== -->
+<section id="installs" class="bg-bone py-16 md:py-24 paper-grain">
+  <div class="max-w-[1440px] mx-auto px-4 md:px-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 mb-10 md:mb-14 items-end">
+      <div class="md:col-span-7">
+        <p class="eyebrow eyebrow-rule text-asphalt mb-4">SELECT INSTALLATIONS</p>
+        <h2 class="display-tight text-5xl md:text-7xl lg:text-8xl text-ink leading-[0.92]">Five decades.<br><span class="text-stadium">Same workshop floor.</span></h2>
+      </div>
+      <div class="md:col-span-5">
+        <p class="pullquote text-xl md:text-2xl text-ink/80">
+          A small selection from a long file. Stadium courts and university programs sit alongside hillside privacy installs and parks-and-rec rebuilds &mdash; all out of the same Glendale shop.
+        </p>
+      </div>
+    </div>
+
+    <!-- Editorial gallery -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-6">
+
+      <!-- Indian Wells (large) -->
+      <figure class="lift md:col-span-7 bg-paper rounded-sm overflow-hidden border border-ink/10">
+        <div class="aspect-[16/10] overflow-hidden bg-stadiumDk">
+          <img src="images/Indian_Wells_Stadium.jpg" alt="Stadium court at Indian Wells Tennis Garden ready for play" class="w-full h-full object-cover archival">
+        </div>
+        <figcaption class="p-5 md:p-6 grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+          <div class="md:col-span-2">
+            <p class="eyebrow text-asphalt mb-1">INSTALL · 01 / STADIUM</p>
+            <h3 class="display-tight text-3xl md:text-5xl">Indian Wells Tennis Garden</h3>
+          </div>
+          <p class="text-sm text-asphalt md:text-right">
+            Stadium court &mdash; Edwards classic posts, 40LS net, NJP netsticks. The chair umpire&rsquo;s view from the singles match line.
+          </p>
+        </figcaption>
+      </figure>
+
+      <!-- Pepperdine -->
+      <figure class="lift md:col-span-5 bg-paper rounded-sm overflow-hidden border border-ink/10">
+        <div class="aspect-[4/3] overflow-hidden bg-stadiumDk">
+          <img src="images/PEPPERDINE3.jpg" alt="Black open-mesh windscreen on a 12-foot fence at Pepperdine University tennis court" class="w-full h-full object-cover archival">
+        </div>
+        <figcaption class="p-5 md:p-6">
+          <p class="eyebrow text-asphalt mb-1">INSTALL · 02 / NCAA</p>
+          <h3 class="display-tight text-3xl md:text-4xl">Pepperdine University</h3>
+          <p class="text-sm text-asphalt mt-2">Black open mesh on 12&prime; fence. Center tape support. Site of the 1999 NCAA Tennis Finals.</p>
+        </figcaption>
+      </figure>
+
+      <!-- UCLA / Studio City split -->
+      <figure class="lift md:col-span-4 bg-paper rounded-sm overflow-hidden border border-ink/10">
+        <div class="aspect-[4/5] overflow-hidden bg-stadiumDk">
+          <img src="images/30ls.jpg" alt="Edwards 30LS tennis net installed on a home court" class="w-full h-full object-cover archival">
+        </div>
+        <figcaption class="p-5 md:p-6">
+          <p class="eyebrow text-asphalt mb-1">INSTALL · 03 / ATP</p>
+          <h3 class="display-tight text-3xl md:text-4xl">UCLA · LA Open</h3>
+          <p class="text-sm text-asphalt mt-2">Edwards 40 LS net hung for warmups during the LA Open. Marcelo Rios reps the baseline; the Mercedes logo stays off the order form.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="lift md:col-span-4 bg-paper rounded-sm overflow-hidden border border-ink/10">
+        <div class="aspect-[4/5] overflow-hidden bg-stadiumDk">
+          <img src="images/studiocitya4.jpg" alt="Green vinyl windscreen on a 12-foot tennis court fence at Studio City Golf and Tennis Club" class="w-full h-full object-cover archival">
+        </div>
+        <figcaption class="p-5 md:p-6">
+          <p class="eyebrow text-asphalt mb-1">INSTALL · 04 / CLUB</p>
+          <h3 class="display-tight text-3xl md:text-4xl">Studio City G&amp;T</h3>
+          <p class="text-sm text-asphalt mt-2">Green vinyl, 9&prime; tall, single center tape. Solid backdrop &mdash; the right choice for a club court that wants stillness behind the player.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="lift md:col-span-4 bg-paper rounded-sm overflow-hidden border border-ink/10">
+        <div class="aspect-[4/5] overflow-hidden bg-stadiumDk">
+          <img src="images/VINYLHILLSIDE2.jpg" alt="Vinyl windscreen on a court fence in the Hollywood Hills with privacy view" class="w-full h-full object-cover archival">
+        </div>
+        <figcaption class="p-5 md:p-6">
+          <p class="eyebrow text-asphalt mb-1">INSTALL · 05 / PRIVATE</p>
+          <h3 class="display-tight text-3xl md:text-4xl">Hollywood Hills</h3>
+          <p class="text-sm text-asphalt mt-2">Vinyl down a hillside fence. Privacy from neighbors, full block of the canyon road. Same fabric, different problem.</p>
+        </figcaption>
+      </figure>
+
+      <!-- University of Redlands (wide) -->
+      <figure class="lift md:col-span-12 bg-paper rounded-sm overflow-hidden border border-ink/10">
+        <div class="aspect-[16/6] overflow-hidden bg-stadiumDk">
+          <img src="images/University_of_Redlands_Field.jpg" alt="University of Redlands sports field with NJP installed netting and screening" class="w-full h-full object-cover archival">
+        </div>
+        <figcaption class="p-5 md:p-6 grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
+          <div class="md:col-span-2">
+            <p class="eyebrow text-asphalt mb-1">INSTALL · 06 / FIELD</p>
+            <h3 class="display-tight text-3xl md:text-5xl">University of Redlands</h3>
+          </div>
+          <p class="text-sm text-asphalt md:text-right">
+            Stadium-grade screen on the field-side fence. The work doesn&rsquo;t announce itself &mdash; that&rsquo;s the point.
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Pull quote / Edwards heritage ===== -->
+<section class="bg-ink text-bone py-16 md:py-24 relative overflow-hidden">
+  <div class="absolute inset-0 chainlink opacity-25 pointer-events-none"></div>
+  <div class="relative max-w-[1100px] mx-auto px-4 md:px-8 text-center">
+    <p class="eyebrow text-tape eyebrow-rule justify-center mb-6">EDWARDS · EST. 1884 · WIMBLEDON SUPPLIER</p>
+    <blockquote class="pullquote text-3xl md:text-5xl lg:text-6xl text-bone leading-[1.06]">
+      &ldquo;A tennis post should support the net, look nice, and allow for ease of installation for many years.&rdquo;
+    </blockquote>
+    <p class="eyebrow text-bone/55 mt-6">&mdash; FROM THE NJP CATALOG, ON THE EDWARDS CLASSIC POST</p>
+
+    <div class="mt-12 md:mt-14 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-3xl mx-auto">
+      <div class="border border-bone/15 rounded-sm p-4">
+        <p class="eyebrow text-bone/55">EDWARDS</p>
+        <p class="display-tight text-3xl md:text-4xl mt-1 lining-nums">1884</p>
+      </div>
+      <div class="border border-bone/15 rounded-sm p-4">
+        <p class="eyebrow text-bone/55">WIMBLEDON</p>
+        <p class="display-tight text-3xl md:text-4xl mt-1">YES</p>
+      </div>
+      <div class="border border-bone/15 rounded-sm p-4">
+        <p class="eyebrow text-bone/55">OLYMPICS</p>
+        <p class="display-tight text-3xl md:text-4xl mt-1">YES</p>
+      </div>
+      <div class="border border-bone/15 rounded-sm p-4 bg-tape/15 border-tape/40">
+        <p class="eyebrow text-tape">NJP CARRIES</p>
+        <p class="display-tight text-3xl md:text-4xl mt-1">SINCE '71</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Process ===== -->
+<section id="process" class="bg-bone py-16 md:py-24 paper-grain">
+  <div class="max-w-[1440px] mx-auto px-4 md:px-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 mb-10 md:mb-14 items-end">
+      <div class="md:col-span-7">
+        <p class="eyebrow eyebrow-rule text-asphalt mb-4">HOW WE WORK</p>
+        <h2 class="display-tight text-5xl md:text-7xl lg:text-8xl text-ink leading-[0.92]">Wholesale.<br>Manufacturer.<br><span class="text-stadium">Contractor.</span></h2>
+      </div>
+      <div class="md:col-span-5">
+        <p class="pullquote text-xl md:text-2xl text-ink/80">
+          Three roles, one workshop. We sell raw goods to other installers, fabricate finished pieces from inventory, and put it on the fence ourselves across Greater LA. Anywhere outside that radius &mdash; we ship.
+        </p>
+      </div>
+    </div>
+
+    <ol class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mt-2">
+      <li class="lift bg-paper border border-ink/10 rounded-sm p-6 md:p-7">
+        <p class="eyebrow text-tape">STEP 01</p>
+        <h3 class="display-tight text-3xl md:text-4xl mt-2">CALL OR EMAIL</h3>
+        <p class="text-sm text-asphalt mt-2">800-773-4657 or njpsports@earthlink.net. Tell us the fence height, run length, and what you&rsquo;re trying to block.</p>
+      </li>
+      <li class="lift bg-paper border border-ink/10 rounded-sm p-6 md:p-7">
+        <p class="eyebrow text-tape">STEP 02</p>
+        <h3 class="display-tight text-3xl md:text-4xl mt-2">SAMPLES &amp; QUOTE</h3>
+        <p class="text-sm text-asphalt mt-2">We send physical fabric samples and a written quote. Mesh weights, vinyl colors, hem details, grommet spacing &mdash; the whole spec.</p>
+      </li>
+      <li class="lift bg-paper border border-ink/10 rounded-sm p-6 md:p-7">
+        <p class="eyebrow text-tape">STEP 03</p>
+        <h3 class="display-tight text-3xl md:text-4xl mt-2">FABRICATE</h3>
+        <p class="text-sm text-asphalt mt-2">Cut, hem, grommet, tape, label. Done on the floor in Glendale. Logos and printed graphics handled in-house.</p>
+      </li>
+      <li class="lift bg-paper border border-ink/10 rounded-sm p-6 md:p-7">
+        <p class="eyebrow text-tape">STEP 04</p>
+        <h3 class="display-tight text-3xl md:text-4xl mt-2">INSTALL OR SHIP</h3>
+        <p class="text-sm text-asphalt mt-2">Install crew across Greater LA. Worldwide shipping otherwise &mdash; rolled, palletized, freight-ready.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact" class="bg-ink text-bone py-16 md:py-24 relative overflow-hidden">
+  <div class="absolute inset-0 chainlink opacity-30 pointer-events-none"></div>
+  <div class="relative max-w-[1440px] mx-auto px-4 md:px-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 mb-12 md:mb-16 items-end">
+      <div class="md:col-span-7">
+        <p class="eyebrow text-tape eyebrow-rule mb-4">CONTACT</p>
+        <h2 class="display-tight text-5xl md:text-7xl lg:text-8xl leading-[0.92]">Drop a line.<br>We&rsquo;ll send the<br><span class="text-tape">samples.</span></h2>
+      </div>
+      <div class="md:col-span-5">
+        <p class="pullquote text-xl md:text-2xl text-bone/85">
+          Mon–Fri, seven to four Pacific. We answer the phone, return the email, and ship the catalog. Same numbers as 1996. Same workshop as 1971.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-6">
+      <!-- Phone -->
+      <a href="tel:18007734657" class="lift md:col-span-6 lg:col-span-4 block bg-bone/5 border border-bone/15 rounded-sm p-6 md:p-7 hover:bg-bone/10">
+        <p class="eyebrow text-bone/55 mb-2">CALL · TOLL-FREE</p>
+        <p class="display-tight text-4xl md:text-5xl lining-nums">800-773-4657</p>
+        <p class="eyebrow text-bone/55 mt-4 mb-1">LOCAL</p>
+        <p class="text-lg lining-nums">818-247-3914</p>
+        <p class="eyebrow text-bone/55 mt-3 mb-1">FAX</p>
+        <p class="text-base text-bone/75 lining-nums">818-247-2605</p>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:njpsports@earthlink.net" class="lift md:col-span-6 lg:col-span-4 block bg-bone/5 border border-bone/15 rounded-sm p-6 md:p-7 hover:bg-bone/10">
+        <p class="eyebrow text-bone/55 mb-2">EMAIL</p>
+        <p class="font-mono text-base sm:text-lg md:text-xl lg:text-2xl font-medium tracking-tight break-words leading-snug">njpsports<wbr>@earthlink.net</p>
+        <p class="display-tight text-3xl mt-3 text-bone/85">Same address since '96.</p>
+        <p class="text-sm text-bone/65 mt-3">Send us your fence run, heights, and what you&rsquo;re screening &mdash; we&rsquo;ll come back with a quote and physical samples in the mail.</p>
+      </a>
+
+      <!-- Hours -->
+      <div class="md:col-span-12 lg:col-span-4 bg-bone/5 border border-bone/15 rounded-sm p-6 md:p-7">
+        <p class="eyebrow text-bone/55 mb-3">SHOP HOURS · GLENDALE</p>
+        <dl class="grid grid-cols-2 gap-y-2 text-base lining-nums">
+          <dt class="text-bone/65">Monday</dt><dd>7:00 am – 4:00 pm</dd>
+          <dt class="text-bone/65">Tuesday</dt><dd>7:00 am – 4:00 pm</dd>
+          <dt class="text-bone/65">Wednesday</dt><dd>7:00 am – 4:00 pm</dd>
+          <dt class="text-bone/65">Thursday</dt><dd>7:00 am – 4:00 pm</dd>
+          <dt class="text-bone/65">Friday</dt><dd>7:00 am – 4:00 pm</dd>
+          <dt class="text-bone/65">Sat / Sun</dt><dd class="text-bone/55">Closed</dd>
+        </dl>
+        <p class="eyebrow text-bone/55 mt-5 mb-1">PACIFIC TIME</p>
+        <p class="text-sm text-bone/75">Phones answered in shop hours; voicemail returned next business day.</p>
+      </div>
+
+      <!-- Address shop -->
+      <div class="md:col-span-6 lg:col-span-6 bg-bone/5 border border-bone/15 rounded-sm p-6 md:p-7">
+        <p class="eyebrow text-bone/55 mb-3">SHOP / WILL CALL</p>
+        <p class="display-tight text-3xl md:text-4xl">548 W. Arden Ave.</p>
+        <p class="text-bone/85 mt-1">Glendale, California 91203</p>
+        <p class="text-sm text-bone/65 mt-3">Walk-in for samples, returns, repairs, and Playmate service. Curb parking on Arden.</p>
+      </div>
+
+      <!-- Mailing -->
+      <div class="md:col-span-6 lg:col-span-6 bg-bone/5 border border-bone/15 rounded-sm p-6 md:p-7">
+        <p class="eyebrow text-bone/55 mb-3">MAILING</p>
+        <p class="display-tight text-3xl md:text-4xl">P.O. Box 1469</p>
+        <p class="text-bone/85 mt-1">Glendale, California 91209-1469</p>
+        <p class="text-sm text-bone/65 mt-3">Mail samples and check payments to the box. Freight and pallets to the shop on Arden.</p>
+      </div>
+    </div>
+
+    <!-- License strip -->
+    <div class="mt-10 md:mt-14 border-t border-bone/15 pt-6 md:pt-8 flex flex-wrap items-center justify-between gap-4">
+      <div class="eyebrow text-bone/55">CONTRACTOR'S LIC No. <span class="text-bone">284844 C-13</span></div>
+      <div class="eyebrow text-bone/55">EST. <span class="text-bone">MCMLXXI</span> · GLENDALE · CA</div>
+      <div class="eyebrow text-bone/55">USAPA · <a href="https://www.usapa.org/" target="_blank" rel="noopener" class="text-bone hover:text-tape transition-colors ulink">PICKLEBALL CONVERSION INFO</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Brand footer (masthead) ===== -->
+<footer class="bg-bone border-t border-ink/15">
+  <div class="max-w-[1440px] mx-auto px-4 md:px-8 py-12 md:py-16 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
+
+    <div class="md:col-span-5">
+      <a href="#" class="flex items-center gap-3">
+        <span class="markframe inline-flex items-center justify-center w-12 h-12 rounded-sm overflow-hidden">
+          <img src="images/favicon.png" alt="NJP Sports tennis player mark" class="w-full h-full object-cover">
+        </span>
+        <span class="leading-none">
+          <span class="block display-tight text-3xl md:text-4xl">NJP SPORTS, INC.</span>
+          <span class="block eyebrow text-asphalt mt-1">WINDSCREEN &amp; TENNIS · GLENDALE · CA</span>
+        </span>
+      </a>
+      <p class="pullquote text-ink/80 text-lg mt-6 max-w-md">
+        Specialists in custom-fabricated windscreen for tennis courts, baseball fields, yard fences, privacy fences, wrought iron, front gates, and overhead.
+      </p>
+    </div>
+
+    <div class="md:col-span-3">
+      <p class="eyebrow text-asphalt mb-3">CAPABILITIES</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#capabilities" class="ulink text-ink/85 hover:text-ink">Mesh screen</a></li>
+        <li><a href="#capabilities" class="ulink text-ink/85 hover:text-ink">Vinyl screen</a></li>
+        <li><a href="#capabilities" class="ulink text-ink/85 hover:text-ink">Tennis nets · Edwards</a></li>
+        <li><a href="#capabilities" class="ulink text-ink/85 hover:text-ink">Tennis posts</a></li>
+        <li><a href="#capabilities" class="ulink text-ink/85 hover:text-ink">Court cleaning</a></li>
+        <li><a href="#capabilities" class="ulink text-ink/85 hover:text-ink">Ball machines · Playmate</a></li>
+        <li><a href="#capabilities" class="ulink text-ink/85 hover:text-ink">Volleyball · paddle · pickleball</a></li>
+        <li><a href="#capabilities" class="ulink text-ink/85 hover:text-ink">Baseball &amp; golf netting</a></li>
+      </ul>
+    </div>
+
+    <div class="md:col-span-4">
+      <p class="eyebrow text-asphalt mb-3">CONTACT</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="tel:18007734657" class="text-ink/85 hover:text-ink">800-773-4657 · toll-free</a></li>
+        <li><a href="tel:18182473914" class="text-ink/85 hover:text-ink">818-247-3914 · local</a></li>
+        <li class="text-asphalt">818-247-2605 · fax</li>
+        <li><a href="mailto:njpsports@earthlink.net" class="ulink text-ink/85 hover:text-ink">njpsports@earthlink.net</a></li>
+        <li class="pt-2 border-t border-ink/10 mt-3 text-asphalt">548 W. Arden Ave., Glendale, CA 91203</li>
+        <li class="text-asphalt">P.O. Box 1469, Glendale, CA 91209-1469</li>
+        <li class="text-asphalt">Mon–Fri · 7am–4pm Pacific</li>
+        <li class="eyebrow text-asphalt mt-3">CONTRACTOR'S LIC No. 284844 C-13</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Big wordmark -->
+  <div class="border-t border-ink/15 overflow-hidden">
+    <div class="max-w-[1440px] mx-auto px-4 md:px-8 py-6 md:py-8 flex items-baseline justify-between gap-4">
+      <p class="display-tight text-ink text-[clamp(48px,12vw,180px)] leading-none whitespace-nowrap">NJP&nbsp;SPORTS</p>
+      <p class="eyebrow text-asphalt whitespace-nowrap hidden md:block">SINCE&nbsp;1971&nbsp;·&nbsp;ON&nbsp;THE&nbsp;WEB&nbsp;SINCE&nbsp;1996</p>
+    </div>
+  </div>
+
+  <!-- Banana Bytes credit (required) -->
+  <div class="bg-ink text-bone/55 text-center py-5">
+    <a href="https://instagram.com/BananaCares" target="_blank" rel="noopener" class="eyebrow hover:text-tape transition-colors">
+      MOCKUP CREATED BY BANANA BYTES
+    </a>
+  </div>
+</footer>
+
+<script>
+  // Reveal-on-scroll
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+  }
+</script>
+
+</body>
+</html>
