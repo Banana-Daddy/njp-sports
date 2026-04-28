@@ -1,6 +1,8 @@
 # NJP Sports Inc — Design Brief
 
-> **Round 3 update — Catalog Edition:** Two directions now live behind a selector page. Editorial Edition (Round 2) is preserved at `direction-editorial.html`; the new Catalog Edition (`direction-catalog.html`) goes deep on every published SKU with modal price-list popups, dense scannable tables, and direct links to the source pages. See bottom of file for the Round 3 changelog.
+> **Round 4 update — One unified site:** Restructured the IA so the editorial build is the homepage (root URL) and the SKU catalog is a sub-page (`/catalog.html`) linked from the homepage's nav, top wire, hero, capabilities CTA, and footer. No more "Pick your edition" selector — it reads like one production-ready brand site with a deep catalog, not a designer's compare-the-versions page. See bottom of file for the Round 4 changelog.
+>
+> **Round 3 — Catalog Edition added:** A second build that goes deep on every published SKU with modal price-list popups, dense scannable tables, and direct links to the source pages. Initially shipped behind a selector at root (replaced in Round 4).
 >
 > **Round 2 update:** First pass under-represented the catalog and incorrectly placed Edwards + Playmate in the "where the work lives" marquee. Capabilities expanded from 10 cards to a 17-line catalog organized in three groups; venue marquee now lists only real install locations; new dedicated **Distributors** band carries Edwards / Playmate / First Team.
 
@@ -131,6 +133,44 @@ Auto-generation skipped this build (Grok / Gemini API keys not set in this sessi
 | **Total before publish** | **~6m 45s** |
 
 PUBLISH and DELIVER timings appended to delivery message.
+
+## Round 4 Changelog — One unified site
+
+After Daddy asked: *"should that just be linked from the homepage and not used as a home page?"* and clarified *"using the first build as the home page and then the catalog as linked to the new catalogue as if it's all one built out site."*
+
+### Final IA (production-ready)
+```
+/                    → editorial build (the homepage; what a client lands on)
+/catalog.html        → full SKU catalog sub-page (linked from nav + hero + footer)
+```
+
+The selector page is removed. There are no more "two editions" — it's one site with a homepage and a catalog sub-page. Same as a real e-commerce or contractor site would be structured.
+
+### What linked the catalog into the site
+On the homepage:
+- Top wire (right side, between contractor's lic + phone): `VIEW FULL CATALOG ↗`
+- Sticky nav (between CAPABILITIES and INSTALLS): `FULL CATALOG ↗`
+- Hero CTA stack (next to "Request samples"): outline button `FULL CATALOG ↗`
+- Capabilities pullquote column: ink-filled `VIEW FULL CATALOG · 100+ SKUS ↗`
+- Footer Capabilities column: every product link now deep-links to its `catalog.html#anchor`, plus a tape-red `Full catalog (100+ SKUs) ↗` row at the bottom
+
+On the catalog page:
+- Top wire: `↩ HOMEPAGE / CATALOG / 800-773-4657`
+- Hero eyebrow swapped: `EDITION 02 · THE FULL CATALOG` → `PRODUCT INDEX · 17 LINES · 100+ SKUS`
+- Hero CTA stack: `JUMP TO PRODUCTS ↓` + phone + `↩ BACK TO HOMEPAGE`
+- Footer "VIEW" column rewritten to "SITE" with: Homepage / Full catalog (you are here) / Contact & samples / Installations / Original 1996 site
+- Contact section license strip back-link: `↩ BACK TO HOMEPAGE`
+
+### Files moved / removed
+- `direction-editorial.html` → **`index.html`** (the homepage)
+- `direction-catalog.html` → **`catalog.html`** (sub-page)
+- `selector.html` → **deleted** (the "Pick your edition" page is no longer needed)
+
+### URL changes for anyone with old links
+- Old root-URL Round 1/2 link `/` still works — same page, just no longer a selector
+- Old Round 3 link `/direction-editorial.html` now 404s (the file was renamed). Acceptable since Daddy only had that link for a few hours.
+- Old Round 3 link `/direction-catalog.html` now 404s. The replacement is `/catalog.html`.
+- OG / canonical URLs updated to point to the new paths.
 
 ## Round 3 Changelog — Catalog Edition
 
