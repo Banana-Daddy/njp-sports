@@ -85,6 +85,53 @@ Caught and corrected before publishing:
 - Email card on mobile was breaking `njpsports@earthlink.net` mid-character because `display-tight text-4xl break-all` was too wide for the 375 px column. Switched to `font-mono text-base` and added a `<wbr>` between handle and domain so the line break (when it does happen) lands at the `@`. Also added a "Same address since '96." display line beneath the email to make the heritage callback intentional.
 - Several specifications quoted on the source site as "Note - currently only available in GREEN" (the court hose) and other inventory-state remarks were intentionally not surfaced in the mockup — they're transient stock conditions, not brand truths.
 
+## Domain / hosting / authorship cross-reference
+
+Asked by Daddy: *"where did you get the info they've been online since 1996?"* and *"can you also see the last time their existing webpage was edited and who designed/uploaded it?"*
+
+### "On the web since 1996" — source
+
+The exact phrase **"IN BUSINESS SINCE 1971 - ON THE WEB SINCE 1996."** is on NJP's own homepage and is repeated verbatim on `mesh.html`, `vinyl.html`, `ballmachines.html`, `chairs.html`, and `basketball.html`. They claim it themselves; the mockup quotes them.
+
+**Independent cross-checks:**
+- **WHOIS** — `njpsports.com` was registered at **Network Solutions on 1998-12-14** to the same Glendale address (`548 Arden Ave, Glendale, CA 91203-1012`). The registrar record predates 1999, so the domain was registered before the first archive.org snapshot. The "1996" figure on NJP's own copy precedes WHOIS by two years — they may have been online via a sub-domain, a directory listing, or with a different registrar before consolidating to `njpsports.com` in 1998. Reasonable to read the 1996 figure as approximate / memory-based, but it's their own claim about themselves.
+- **Wayback Machine** — earliest archive.org capture of `njpsports.com` is **1999-04-27 19:13:26 UTC**. Wayback's small-site coverage is patchy before 1999, so absence is not proof of non-existence pre-1999. Either way, they've been online a long time.
+
+### When was the site last edited?
+
+Server `Last-Modified` headers show that NJP **actively maintains** the site — it isn't a frozen-in-amber 1996 page. Pages get hand-edited when prices or details change:
+
+| Page | Last-Modified |
+|---|---|
+| `nets.html` | **2026-03-25** (most recent) |
+| `tennispost.html` | 2026-02-03 |
+| `tennispostnetinstall.html` | 2026-02-03 *(matches the "Prices as of 2/3/2026" that page literally says)* |
+| `mesh.html` | 2025-07-31 |
+| `vinyl.html` | 2025-07-31 |
+| `measure.html` | 2024-11-15 |
+| `ballmachines.html` | 2024-11-14 |
+| `index.html` *(homepage)* | 2024-11-12 |
+| `photoc.html` | **2009-01-21** *(oldest still in production)* |
+
+So: the homepage was last updated November 2024; product pages get updated whenever NJP runs a price revision (the post-and-net install page was edited the same day they updated the price band to $525–$650). The mockup's narrative — *"Same numbers as 1996. Same workshop as 1971."* — holds factually; the contact details are unchanged across decades, even as the catalog is being kept current.
+
+### Who designed / uploaded the site?
+
+**It's hand-built in-house, no agency.** Evidence:
+
+- **Editor:** 16 of 19 pages carry `<meta name="generator" content="Adobe GoLive 5">` in the `<head>`. **Adobe GoLive 5** was Adobe's WYSIWYG HTML editor (released 2000, discontinued 2008 when Adobe moved to Dreamweaver). The newer pages (`index.html` homepage, `chairs.html`, `netting.html`) drop the generator tag and use a modern `<!DOCTYPE html>` — those are likely hand-typed or run through a different editor for recent revisions.
+- **Server stack:**
+  ```
+  Server: Apache/2.0.54 (Unix) mod_perl/1.99_09 Perl/v5.8.0 mod_ssl/2.0.54
+          OpenSSL/0.9.7l DAV/2 FrontPage/5.0.2.2635 PHP/4.4.0 mod_gzip/2.0.26.1a
+  ```
+  Apache 2.0.54 was released in **2005**. PHP 4.4.0 was 2005. **FrontPage/5.0.2.2635** is the Microsoft FrontPage Server Extensions ID — that bundle was the standard ~2000–2006 way to "save HTML directly from the editor to the server" via a FrontPage-aware FTP-ish protocol. The combination is consistent with someone uploading edited GoLive HTML over FrontPage extensions to a Hurricane Electric box and never rebuilding the stack.
+- **Nameservers:** `NS1.HE.NET` through `NS5.HE.NET` — that's **Hurricane Electric**, a long-running budget colo / DNS host. Same provider since whenever the domain was set up.
+- **Registrar:** **Network Solutions, LLC** — the original "internet registry" registrar from the 1990s, never moved off it.
+- **Registrant:** the registrant address on WHOIS is the **NJP shop itself** (548 Arden Ave, Glendale CA 91203). No agency, no holding company, no privacy proxy. They own and run their own domain.
+
+In short: the site was built by NJP themselves in Adobe GoLive ~2000s, sits on a 2005-era Apache box at Hurricane Electric with FrontPage Server Extensions, and gets hand-edited by someone in the shop whenever something changes (most recently March 2026). It looks 1996 because it *is* essentially 1996 toolchain — and that's the redesign's whole opportunity.
+
 ## Source pages fetched
 
 ```
